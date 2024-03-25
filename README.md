@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: mlebkowski/attach-github-pr-to-trello-card-action@1
+      - uses: mlebkowski/attach-github-pr-to-trello-card-action@v1
         with:
           trello-api-key: ${{ secrets.TRELLO_API_KEY }}
           trello-token: ${{ secrets.TRELLO_TOKEN }}
