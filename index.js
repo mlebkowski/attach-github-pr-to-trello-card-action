@@ -1,6 +1,6 @@
-const extractTrelloCards = require("extract-trello-cards");
-const TrelloSdk = require("trello-sdk");
-const upsertWithDependencies = require("upsert-pull-request-on-card");
+const extractTrelloCards = require("./extract-trello-cards");
+const TrelloSdk = require("./trello-sdk");
+const upsertWithDependencies = require("./upsert-pull-request-on-card");
 const { getInput, getEventPayload } = require("./actions-helpers");
 
 const trello = new TrelloSdk(

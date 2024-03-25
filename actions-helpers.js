@@ -1,4 +1,4 @@
-import { readFileSync } from "fs";
+const { readFileSync } = require("fs");
 
 function getInput(name) {
   const val = process.env[`INPUT_${name.replace(/ /g, "_").toUpperCase()}`];
