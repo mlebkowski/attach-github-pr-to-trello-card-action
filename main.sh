@@ -37,7 +37,7 @@ upsert-pull-request-on-card() {
 main() {
   declare event="$1"
   local body="$(echo "$event" | jq -r .pull_request.body)"
-  local url="$(echo "$event" | jq -r .pull_request.url)"
+  local url="$(echo "$event" | jq -r .pull_request.html_url)"
 
   echo "$body" | extract-trello-cards | while read shortLink; do
     upsert-pull-request-on-card "$shortLink" "$url"
