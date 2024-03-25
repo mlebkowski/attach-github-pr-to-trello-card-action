@@ -14,9 +14,14 @@ jobs:
         run: |
           test -n "{{ secrets.TRELLO_KEY }}"
           test -n "{{ secrets.TRELLO_TOKEN }}"
-      - name: Attach PR to trello cards
+      - name: debug
         env:
           GITHUB_EVENT: ${{ toJson(github.event) }}
-          TRELLO_KEY: ${{ secrets.TRELLO_KEY }}
-          TRELLO_SECRET: ${{ secrets.TRELLO_SECRET }}
-        run: ./main.sh "$GITHUB_EVENT"
+        run: echo $GITHUB_EVENT | jq .
+#      - name: Attach PR to trello cards
+#        env:
+#          GITHUB_EVENT: ${{ toJson(github.event) }}
+#          TRELLO_KEY: ${{ secrets.TRELLO_KEY }}
+#          TRELLO_SECRET: ${{ secrets.TRELLO_SECRET }}
+#        run: ./main.sh "$GITHUB_EVENT"
+#
