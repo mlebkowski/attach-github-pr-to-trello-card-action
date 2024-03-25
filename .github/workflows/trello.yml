@@ -7,17 +7,8 @@ on:
 jobs:
   trello:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v4
-      - name: Test secrets
-        run: |
-          test -n "{{ secrets.TRELLO_KEY }}"
-          test -n "{{ secrets.TRELLO_TOKEN }}"
-      - name: Attach PR to trello cards
-        env:
-          GITHUB_EVENT: ${{ toJson(github.event) }}
-          TRELLO_KEY: ${{ secrets.TRELLO_KEY }}
-          TRELLO_TOKEN: ${{ secrets.TRELLO_TOKEN }}
-        run: ./main.sh "$GITHUB_EVENT"
-
+      - uses: mlebkowski/attach-github-pr-to-trello-card-action@1
+        with:
+          trello-api-key: ${{ secrets.TRELLO_KEY }}
+          trello-token: ${{ secrets.TRELLO_TOKEN }}
