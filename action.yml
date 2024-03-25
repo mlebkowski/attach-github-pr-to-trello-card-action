@@ -1,6 +1,8 @@
 name: 'Attach Github PR to Trello cards'
 description: 'Attaches a link to the Github PR to all mentioned Trello cards'
-icon: list
+branding:
+  icon: list
+  color: blue
 inputs:
   trello-api-key:
     description: 'Trello API key created for your PowerUp : https://trello.com/power-ups/admin'
