@@ -1,0 +1,12 @@
+name: 'Attach Github PR to Trello cards'
+description: 'Attaches a link to the Github PR to all mentioned Trello cards'
+inputs:
+  trello-api-key:
+    description: 'Trello API key created for your PowerUp : https://trello.com/power-ups/admin'
+    required: true
+  trello-token:
+    description: 'A token with write scope generated with that API key: https://trello.com/1/authorize?expiration=never&scope=read,write&response_type=token&key={apikey}'
+    required: true
+runs:
+  using: 'node20'
+  main: 'index.js'
