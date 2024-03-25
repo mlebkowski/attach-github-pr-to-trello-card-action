@@ -2,7 +2,7 @@ name: Link to Trello
 
 on:
   pull_request:
-    types: [ "created", "edited" ]
+    types: [ "opened", "edited" ]
 
 jobs:
   trello:
@@ -16,5 +16,4 @@ jobs:
       - name: Attach PR to trello cards
         env:
           GITHUB_EVENT: ${{ toJson(github.event) }}
-        run: |
-          echo "$GITHUB_EVENT"
+        run: ./main.sh "$GITHUB_EVENT"
