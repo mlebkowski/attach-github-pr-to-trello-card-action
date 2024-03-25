@@ -22,6 +22,6 @@ jobs:
         env:
           GITHUB_EVENT: ${{ toJson(github.event) }}
           TRELLO_KEY: ${{ secrets.TRELLO_KEY }}
-          TRELLO_SECRET: ${{ secrets.TRELLO_SECRET }}
+          TRELLO_TOKEN: ${{ secrets.TRELLO_TOKEN }}
         run: ./main.sh "$GITHUB_EVENT"
 
