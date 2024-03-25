@@ -31,7 +31,7 @@ upsert-pull-request-on-card() {
 
   echo "Attaching PR $url to https://trello.com/c/$card";
 
-  echo trello-request "$card" POST "url=$url" >/dev/null
+  trello-request "$card" POST "url=$url" >/dev/null
 }
 
 main() {
