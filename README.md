@@ -5,8 +5,9 @@ attach the URL of that PR to a given card.
 
 ## Inputs
 
-| name           | required | description |
-| trello-api-key | **yes**  | Trello API key [created for your PowerUp](https://trello.com/power-ups/admin) |
+| name           | required | description                                                                                                                                                                                      |
+| -------------- | -------- |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| trello-api-key | **yes**  | Trello API key [created for your PowerUp](https://trello.com/power-ups/admin)                                                                                                                    |
 | trello-token   | **yes**  | A token with write scope [generated with that API key](https://trello.com/1/authorize?expiration=never&scope=read,write&response_type=token&key={apikey}) (replace `{apikey}` with actual value) |
 
 ## Example usage
