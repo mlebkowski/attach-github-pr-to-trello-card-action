@@ -1,4 +1,4 @@
-const upsertPullRequestOnCard = require("./upsert-pull-request-on-card");
+const { upsertPullRequestOnCard } = require("./upsert-pull-request-on-card");
 
 describe("upsertPullRequestOnCard", () => {
   it("adds attachment by URL", async () => {

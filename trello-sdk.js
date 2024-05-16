@@ -1,4 +1,4 @@
-class TwilioSdk {
+class TrelloSdk {
   #key;
   #token;
 
@@ -21,4 +21,4 @@ class TwilioSdk {
   }
 }
 
-module.exports = TwilioSdk;
+module.exports = { TrelloSdk };

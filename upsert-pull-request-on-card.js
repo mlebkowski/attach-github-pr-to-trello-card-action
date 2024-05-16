@@ -10,4 +10,4 @@ async function upsertPullRequestOnCard(trello, url, cardId) {
   return `Attaching PR ${url} to https://trello.com/c/${cardId}`;
 }
 
-module.exports = upsertPullRequestOnCard;
+module.exports = { upsertPullRequestOnCard };
