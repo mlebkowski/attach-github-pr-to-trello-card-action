@@ -10,6 +10,9 @@ inputs:
   trello-token:
     description: 'A token with write scope generated with that API key: https://trello.com/1/authorize?expiration=never&scope=read,write&response_type=token&key={apikey}'
     required: true
+  required:
+    description: 'Should the action fail if no Trello cards are mentioned?'
+    required: false
 runs:
   using: 'node20'
   main: 'index.js'
