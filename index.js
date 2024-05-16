@@ -1,5 +1,5 @@
 const { TrelloSdk } = require("./trello-sdk");
-const { upsertWithDependencies } = require("./upsert-pull-request-on-card");
+const { upsertPullRequestOnCard } = require("./upsert-pull-request-on-card");
 const { getInput, findInput, getEventPayload } = require("./actions-helpers");
 const { attachTrelloCards } = require("./attach-trello-cards");
 
@@ -12,7 +12,7 @@ const trello = new TrelloSdk(
 );
 
 const { html_url: url, body } = getEventPayload().pull_request;
-const updateCard = upsertWithDependencies.bind(null, trello, url);
+const updateCard = upsertPullRequestOnCard.bind(null, trello, url);
 const print = (messages) => console.log(messages.join("\n"));
 const error = (message) => console.error(message);
 
