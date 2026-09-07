@@ -14,5 +14,5 @@ inputs:
     description: 'Should the action fail if no Trello cards are mentioned?'
     required: false
 runs:
-  using: 'node20'
+  using: 'node24'
   main: 'index.js'
